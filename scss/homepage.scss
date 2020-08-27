@@ -1,0 +1,14 @@
+.homepage {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 110vh;
+    z-index: -1;
+    background-image: url("../images/layer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

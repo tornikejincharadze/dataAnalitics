@@ -1,0 +1,43 @@
+h1 {
+  font-size: 48px;
+  line-height: 64px;
+  margin-bottom: 15px;
+  color: #160637;
+}
+h2 {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 16px;
+  color: #160637;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 27px;
+  margin-bottom: 16px;
+  color: #160637;
+}
+
+h4{
+  font-size: 16px;
+  line-height: 24px;
+  color: #160637;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #6f6f6f;
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+}

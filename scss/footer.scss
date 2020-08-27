@@ -1,0 +1,15 @@
+.footer {
+  & > .wrapper:not(.copyright) {
+    padding: 60px 0 40px;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  text-align: center;
+}

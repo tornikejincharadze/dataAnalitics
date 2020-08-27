@@ -1,0 +1,20 @@
+.sitemap {
+  &-list {
+    display: flex;
+  }
+  &-items {
+    &:not(:last-of-type) {
+      margin-right: 56px;
+    }
+  }
+  &--item {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 0;
+    margin: 3px 0;
+    color: #160637;
+    &:hover {
+      color: #722ed1;
+    }
+  }
+}

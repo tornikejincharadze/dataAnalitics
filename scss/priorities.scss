@@ -1,0 +1,42 @@
+.priorities {
+  &-list {
+    display: flex;
+    margin-top: 48px;
+  }
+  &-item {
+    flex: 1;
+    &:not(:last-of-type) {
+      margin-right: 120px;
+    }
+  }
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    margin-bottom: 24px;
+    &--green {
+      background-color: #f6ffed;
+    }
+    &--red {
+      background-color: #fff1f0;
+    }
+    &--blue {
+      background-color: #e6f7ff;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .wrapper > {
+    h2,
+    p {
+      width: 500px;
+      max-width: 100%;
+    }
+  }
+}

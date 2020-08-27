@@ -1,0 +1,29 @@
+.navigation {
+  &-list {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-right: 38px;
+    }
+    &:hover {
+      .navigation-dropdown {
+        display: flex !important;
+      }
+    }
+  }
+  &-link {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+    &:hover {
+      color: #722ed1;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.promote {
+  min-height: 65vh;
+}
+
+.animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+}

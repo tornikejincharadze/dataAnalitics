@@ -1,0 +1,21 @@
+.social {
+  max-width: 185px;
+  &-nav {
+    margin-top: 16px;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+  &-item {
+    &:not(:last-of-type) {
+      margin-right: 16px;
+    }
+  }
+  &-link {
+    padding: 15px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

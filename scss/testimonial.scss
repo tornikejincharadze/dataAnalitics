@@ -1,0 +1,55 @@
+.testimonial {
+  background-image: linear-gradient(#f9f0ff, #e2f1ff);
+  clip-path: polygon(0% 20%, 0% 100%, 100% 80%, 100% 0px);
+  q {
+    font-size: 21px;
+    line-height: 27px;
+    text-align: center;
+    color: #160637;
+    margin-bottom: 16px;
+  }
+  cite,
+  span {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+  }
+  &-list {
+    width: 660px;
+    max-width: 100%;
+    margin-bottom: 55px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-person {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 16px;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+  &-client-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #dec9fa;
+  }
+  &-client {
+    margin: 5px;
+  }
+}
