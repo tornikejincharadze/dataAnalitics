@@ -1,8 +1,16 @@
 {
-  "name": "package",
+  "name": "dataanalitics",
   "version": "1.0.0",
-  "description": "package for project",
+  "description": "<!-- This is a Template design developed by me -->",
   "main": "index.js",
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,11 +23,5 @@
   "bugs": {
     "url": "https://github.com/tornikejincharadze/dataAnalitics/issues"
   },
-  "homepage": "https://github.com/tornikejincharadze/dataAnalitics#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
-  },
-  "dependencies": {}
+  "homepage": "https://github.com/tornikejincharadze/dataAnalitics#readme"
 }
