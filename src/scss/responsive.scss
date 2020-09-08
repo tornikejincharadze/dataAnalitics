@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    margin: 0 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .sign-up {
+    & > .wrapper {
+      flex-direction: column;
+    }
+  }
+  .trusted {
+    &-item {
+      width: 25%;
+    }
+  }
+  .signUp-form {
+    min-width: 100%;
+  }
+  .footer {
+    & > .wrapper:not(.copyright) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: unset;
+    }
+    .wrapper {
+      width: auto;
+    }
+  }
+  .social {
+    figure,
+    p {
+      display: none;
+    }
+    &-nav {
+      margin: 0 0 3rem 0;
+    }
+  }
+  .sitemap {
+    width: 100%;
+    &-list {
+      justify-content: space-around;
+    }
+  }
+}

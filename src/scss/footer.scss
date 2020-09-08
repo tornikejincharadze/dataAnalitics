@@ -1,6 +1,9 @@
 .footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
   & > .wrapper:not(.copyright) {
-    padding: 60px 0 40px;
+    padding: 3.75rem 0 2.5rem;
     justify-content: space-around;
     align-items: flex-start;
   }
@@ -10,6 +13,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 15px;
+  padding-bottom: 0.9375rem;
   text-align: center;
 }

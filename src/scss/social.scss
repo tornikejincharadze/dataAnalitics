@@ -1,7 +1,7 @@
 .social {
-  max-width: 185px;
+  max-width: 11.5625rem;
   &-nav {
-    margin-top: 16px;
+    margin-top: 1rem;
   }
   &-list {
     display: flex;
@@ -9,11 +9,11 @@
   }
   &-item {
     &:not(:last-of-type) {
-      margin-right: 16px;
+      margin-right: 1rem;
     }
   }
   &-link {
-    padding: 15px;
+    padding: 0.9375rem;
     &:hover {
       opacity: 0.8;
     }

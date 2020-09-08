@@ -5,33 +5,38 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .input {
   width: 100%;
-  height: 48px;
+  height: 3rem;
+  font-size: 16px;
   border-width: 1px;
   border-style: solid;
   border-color: #6f6f6f;
   border-radius: 4px;
-  padding: 8px 12px 0 24px;
+  padding: 0.5rem 0.75rem 0 1.5rem;
   &-label {
     position: absolute;
-    left: 24px;
-    font-size: 16px;
-    line-height: 24px;
+    left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #6f6f6f;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     top: 50%;
     transform: translateY(-50%);
     cursor: text;
   }
-  &:focus {
+  &:focus,
+  &.filled {
     & + .input-label {
-      font-size: 12px;
+      font-size: 0.75rem;
       top: 0;
       transform: translateY(0);
     }
+  }
+  &.invalid{
+    border-color: red;
   }
 }
