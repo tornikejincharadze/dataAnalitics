@@ -7,8 +7,16 @@ const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
 const sass = require('gulp-sass');
+const del = require('del');
 const browserSync = require('browser-sync').create();
 const { src, dest, parallel } = require('gulp');
+
+
+function delTask() {
+    return del([
+        'dist/**',
+    ]);
+}
 
 function scssTask() {
     return gulp.src('./src/scss/index.scss')
@@ -44,6 +52,10 @@ function copyIcons() {
     return src('./src/icons/*.svg').pipe(gulp.dest('./dist/icons'));
 }
 
+function copyFonts() {
+    return src('./src/fonts/**/*').pipe(gulp.dest('./dist/fonts'));
+}
+
 function watch() {
     browserSync.init({
         server: {
@@ -61,5 +73,6 @@ exports.scssTask = scssTask;
 exports.jsTask = jsTask;
 exports.imgTask = imgTask;
 exports.copyIcons = copyIcons;
+exports.copyFonts = copyFonts;
 exports.watch = watch;
-exports.default = parallel(scssTask, jsTask, imgTask, copyIcons, watch);
+exports.default = parallel(delTask, scssTask, jsTask, imgTask, copyIcons, copyFonts, watch);
