@@ -57,8 +57,8 @@
               become a data-driven organization with Needle tail
             </p>
             <div class="buttons-container">
-              <button class="btn btn--filled_primary">start free trial</button>
-              <button class="btn btn--filled_secondary">learn more</button>
+              <button class="btn btn--filled btn--filled_primary">start free trial</button>
+              <button class="btn btn--filled btn--filled_secondary">learn more</button>
             </div>
           </div>
           <div class="flex-1">
@@ -147,7 +147,11 @@
         <div class="wrapper">
           <div class="flex-1">
             <div class="tag">
-              <img src="dist/icons/compass.svg" alt="compassIcon" class="tag-icon" />
+              <img
+                src="dist/icons/compass.svg"
+                alt="compassIcon"
+                class="tag-icon"
+              />
               For Engineering Teams
             </div>
             <h2 class="text-bold">Data-driven pipelines in minutes</h2>
@@ -168,8 +172,8 @@
           <ul class="testimonial-list">
             <li class="testimonial-item">
               <q
-                >"What I love about Qubly is the easy way we can collaborate
-                even if there is a lot of people involved in the process"</q
+                >What I love about Qubly is the easy way we can collaborate even
+                if there is a lot of people involved in the process</q
               >
               <figure class="testimonial-person">
                 <img src="dist/images/Profile.png" alt="Profile" />
@@ -229,25 +233,48 @@
             </div>
           </div>
           <div class="flex-1 signUp-form-wrapper">
-            <form action="GET" class="signUp-form">
+            <form action="/" method="GET" class="signUp-form" id="signUpForm">
               <h3 class="text-center text-bold">Sign Up</h3>
               <div class="form__group">
-                <input type="email" id="email" class="input" required />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input"
+                  required
+                />
                 <label for="email" class="input-label"
                   >Your primary email</label
                 >
               </div>
               <div class="form__group">
-                <input type="password" id="password" class="input" required />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="input"
+                  required
+                />
                 <label for="password" class="input-label">Password</label>
               </div>
               <div class="form__group">
-                <input type="password" id="rePassword" class="input" required />
+                <input
+                  type="password"
+                  name="rePassword"
+                  id="rePassword"
+                  class="input"
+                  required
+                />
                 <label for="rePassword" class="input-label"
                   >Re-type password</label
                 >
               </div>
-              <input type="submit" class="btn btn--filled_primary" />
+              <input
+                type="submit"
+                name="submit"
+                value="Start your free trial"
+                class="btn btn--filled btn--filled_primary"
+              />
 
               <span class="signUp-form--divider">OR</span>
 
@@ -291,7 +318,10 @@
               </li>
               <li class="social-item">
                 <a href="#" class="social-link">
-                  <img src="dist/icons/instagram-2016.svg" alt="Instagram logo" />
+                  <img
+                    src="dist/icons/instagram-2016.svg"
+                    alt="Instagram logo"
+                  />
                 </a>
               </li>
             </ul>
@@ -383,5 +413,7 @@
         <small>&copy; Copyright 2020, <b> Tornike Jincharadze </b></small>
       </div>
     </footer>
+
+    <script src="./dist/js/index.js"></script>
   </body>
 </html>
