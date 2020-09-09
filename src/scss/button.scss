@@ -89,16 +89,50 @@
     }
   }
 
-  &--google{
+  &--google {
     padding: 0;
     border-radius: 4px;
   }
 
-  &[type="submit"]{
+  &[type="submit"] {
     border-radius: 4px;
     width: 100%;
-    &:hover{
+    &:hover {
       opacity: 0.95;
+    }
+  }
+
+  &--burger {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    &:before {
+      content: none;
+    }
+    & > span {
+      width: 40px;
+      height: 2px;
+      background-color: #722ed1;
+      display: block;
+      border-radius: 2px;
+      transition: width 0.2s ease-in-out;
+      & + span {
+        margin-top: 7px;
+      }
+    }
+    &.active{
+      &>span{
+        &:nth-child(1){
+          width: 10px;
+        }
+        &:nth-child(2){
+          width: 20px;
+        }
+        &:nth-child(3){
+          width: 30px;
+        }
+      }
     }
   }
 }

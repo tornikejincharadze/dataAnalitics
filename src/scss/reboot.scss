@@ -44,6 +44,9 @@ body {
   flex-direction: column;
   font-family: "Metropolis";
   font-style: normal;
+  &.frozen{
+    overflow: hidden;
+  }
 }
 
 html,
