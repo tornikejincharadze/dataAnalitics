@@ -30,6 +30,7 @@ function validate(email, password, secondPassword) {
     return validateEmail(email) && validatePasswords(password, secondPassword);
 }
 
+// Responsive menu scripts
 const burgerBtn = document.getElementById('brgBtn');
 const burgerMenu = document.getElementById('burgerNav');
 const navItems = Array.from(document.getElementsByClassName('navigation-item'));
