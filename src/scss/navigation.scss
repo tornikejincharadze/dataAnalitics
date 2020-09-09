@@ -43,6 +43,9 @@
       }
       &-item{
         margin-right: 0;
+        & + .navigation-item {
+          margin-top: 10px;
+        }
       }
     }
   }
