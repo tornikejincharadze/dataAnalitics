@@ -10,7 +10,7 @@ formInputs.forEach(item => {
 
 formGroup.submit.addEventListener('click', function (e) {
     e.preventDefault();
-    validate(formGroup.email, formGroup.password, formGroup.rePassword) === true ? HTMLFormElement.prototype.submit.call(formGroup) : console.log('err');
+    validate(formGroup.email, formGroup.password, formGroup.rePassword) === true ? HTMLFormElement.prototype.submit.call(formGroup) : '';
 });
 
 
@@ -30,6 +30,40 @@ function validate(email, password, secondPassword) {
     return validateEmail(email) && validatePasswords(password, secondPassword);
 }
 
-function submit(e){
+const burgerBtn = document.getElementById('brgBtn');
+const burgerMenu = document.getElementById('burgerNav');
+const navItems = Array.from(document.getElementsByClassName('navigation-item'));
 
+function openNav() {
+    burgerBtn.classList.add('active');
+    burgerMenu.classList.add('active');
+    document.body.classList.add('frozen');
+    console.log('opened')
 }
+
+function closeNav() {
+    burgerBtn.classList.remove('active');
+    burgerMenu.classList.remove('active');
+    document.body.classList.remove('frozen');
+    console.log('closed')
+}
+
+function removeActiveClass(nav){
+    nav.forEach(item => {
+        item.classList.remove('active');
+    })
+}
+
+navItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+        e.stopPropagation();
+        removeActiveClass(navItems);
+        this.classList.add('active');
+        closeNav();
+    });
+});
+
+document.addEventListener('click', function (event) {
+    var isClickInside = burgerMenu.contains(event.target) || (burgerBtn.contains(event.target) && !burgerBtn.classList.contains('active'));
+    isClickInside ? openNav() : closeNav();
+});
