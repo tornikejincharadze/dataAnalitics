@@ -59,8 +59,14 @@
       }
     }
   }
-  .priorities-item:not(:last-of-type) {
-    margin-right: 30px;
+  .priorities-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
   }
 
   .testimonial {
@@ -93,8 +99,8 @@
     &:before {
       content: "";
       position: absolute;
-      top: calc(100% + 25px);
-      height: 80px;
+      top: 100%;
+      height: 60px;
       border-width: 1px;
       border-style: dashed;
       border-color: #722ed1;
@@ -131,15 +137,18 @@
   h3 {
     font-size: 1rem;
     line-height: 1.5rem;
+    text-align: center;
   }
 
   h4 {
     font-size: 0.875rem;
     line-height: 1.35rem;
+    text-align: center;
   }
 
   p {
     font-size: 0.75rem;
+    text-align: center;
   }
   .btn {
     &--outlined {
@@ -168,10 +177,6 @@
       align-items: center;
       &:nth-of-type(2n) {
         margin-left: 20px;
-      }
-      p,
-      h3 {
-        text-align: center;
       }
     }
   }
