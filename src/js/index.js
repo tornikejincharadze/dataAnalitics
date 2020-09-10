@@ -15,7 +15,7 @@ formGroup.submit.addEventListener('click', function (e) {
 
 
 function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     re.test(email.value) !== true ? email.classList.add('invalid') : email.classList.remove('invalid');
     return re.test(email.value);
 }
@@ -33,7 +33,7 @@ function validate(email, password, secondPassword) {
 // Responsive menu scripts
 const burgerBtn = document.getElementById('brgBtn');
 const burgerMenu = document.getElementById('burgerNav');
-const navItems = Array.from(document.getElementsByClassName('navigation-item'));
+const navItems = Array.from(document.getElementsByClassName('navigation-link'));
 
 function openNav() {
     burgerBtn.classList.add('active');
@@ -49,10 +49,14 @@ function closeNav() {
     console.log('closed')
 }
 
-function removeActiveClass(nav){
+function removeActiveClass(nav) {
     nav.forEach(item => {
         item.classList.remove('active');
     })
+}
+
+function isDesktop(){
+    return window.innerWidth > 700;
 }
 
 navItems.forEach(item => {
@@ -65,6 +69,7 @@ navItems.forEach(item => {
 });
 
 document.addEventListener('click', function (event) {
-    var isClickInside = burgerMenu.contains(event.target) || (burgerBtn.contains(event.target) && !burgerBtn.classList.contains('active'));
-    isClickInside ? openNav() : closeNav();
+    let isTablet = !isDesktop();
+    let isClickInside = burgerMenu.contains(event.target) || (burgerBtn.contains(event.target) && !burgerBtn.classList.contains('active'));
+    isTablet && isClickInside ? openNav() : closeNav();
 });
